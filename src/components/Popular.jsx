@@ -12,9 +12,10 @@ function Popular() {
     }, [])
     
     const getPopular = async () => {
-
+        // verifica si se encuentra en el localStorage 
         const check = localStorage.getItem('popular');
 
+        // para evitar hacer el fetch en cada actualizacion de la pagina 
         if (check){
             setPopular(JSON.parse(check));
         }else{
