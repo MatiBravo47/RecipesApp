@@ -32,6 +32,7 @@ function Searched() {
   )
 }
 
+//Styled components
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeats(auto-fit, minmax(20rem, 1fr));

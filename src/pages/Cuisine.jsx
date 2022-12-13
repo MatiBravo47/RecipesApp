@@ -36,6 +36,7 @@ return ( <Grid
   );
 }
 
+//Styled components
 const Grid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeats(auto-fit, minmax(20rem, 1fr));

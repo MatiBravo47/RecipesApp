@@ -23,6 +23,8 @@ function Search() {
   );
 }
 
+
+//Style components 
 const FormStyle = styled.form`
   margin: 0rem 20rem;
   div{

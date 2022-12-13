@@ -3,7 +3,6 @@ import { GiNoodles, GiChopsticks } from "react-icons/gi";
 import styled from "styled-components";
 import {NavLink} from 'react-router-dom';
 
-
 function Category() {
   return (
     <List>
@@ -27,6 +26,8 @@ function Category() {
   );
 }
 
+
+//Style components 
 const List = styled.div`
   display: flex;
   justify-content: center;

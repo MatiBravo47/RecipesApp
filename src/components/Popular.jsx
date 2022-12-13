@@ -6,25 +6,21 @@ import '@splidejs/react-splide/css';
 import {Link} from 'react-router-dom';
 
 function Popular() {
-  const [popular, setPopular] = useState([]);
-  
+  const [popular, setPopular] = useState([]); 
   useEffect(() => {
     getPopular();
-  }, [])
-    
+  }, [])    
   const getPopular = async () => {
     // verifica si se encuentra en el localStorage 
     const check = localStorage.getItem('popular');
-
     // para evitar hacer el fetch en cada actualizacion de la pagina 
     if (check){
       setPopular(JSON.parse(check));
     }else{
       const api = await fetch(
         `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
-        ); 
+      ); 
       const data = await api.json();
-
       localStorage.setItem('popular',JSON.stringify(data.recipes));
       setPopular(data.recipes)
       console.log(data.recipes)
