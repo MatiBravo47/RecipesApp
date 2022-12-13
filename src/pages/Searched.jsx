@@ -1,8 +1,7 @@
 import React from 'react'
 import {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 import styled from "styled-components"
-import { Link } from 'react-router-dom';
 
 function Searched() {
 
@@ -10,6 +9,7 @@ function Searched() {
   let params = useParams();
   const getSearched = async (name) => {
     const data = await fetch (`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${name}`)
+    //convierte data a json y guarda en recipes
     const recipes = await data.json();
     setSearchedRecipes(recipes.results);
   };

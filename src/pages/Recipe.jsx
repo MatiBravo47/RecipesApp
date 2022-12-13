@@ -5,8 +5,10 @@ import React from 'react'
 
 function Recipe() {
   let params = useParams();
+
   const [details, setDetails] = useState({});
   const [activeTab, setActiveTab] = useState("instructions");
+  
   const fetchDetails = async () => {
     const data = await fetch(`https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_APP_API_KEY}`);
     const detailData = await data.json();
@@ -16,6 +18,7 @@ function Recipe() {
   useEffect(() => {
     fetchDetails();
   },[params.name]);
+  
   return (
     <DetailWrapper>
       <div>
@@ -49,7 +52,6 @@ function Recipe() {
   )
 }
 
-
 //Styled components 
 const DetailWrapper = styled.div`
   margin-top: 10rem;
@@ -69,7 +71,7 @@ const DetailWrapper = styled.div`
   ul{
     margin-top: 2rem;
   }
-`
+`;
 const Button = styled.button`
   padding: 1rem 2rem;
   color: #313131;
@@ -77,10 +79,10 @@ const Button = styled.button`
   border: 2px solid black;
   margin-right: 2rem;
   font-weight: 600;
-` 
+` ;
 
 const Info = styled.div`
   margin-left: 10rem;
-`
+`;
 
 export default Recipe

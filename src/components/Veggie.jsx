@@ -1,28 +1,42 @@
 //rfce ES7
+//importo hooks de React
+//useState para poder utilizar estados.
 import { useEffect, useState } from "react";
+
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
 import {Link} from "react-router-dom"; 
 
 function Veggie() {
+  //declaro estado con conts.
+  //"veggie" parametro que contiene el valor del estado.
+  //"setVeggie" funcion que se encarga de actualizar el estado.
+  //"useState([])" inicializa el valor, en este caso array vacio pero puede ser cualquier cosa.
   const [veggie, setVeggie] = useState([]);
 
+  //una vez que se carga todo el componente, se ejecuta el useEffect 
+  //o que cambie algun estado
+  //siempre se debe usar con una funcion flecha
+  //importante el ",[]" para que no se haga un bucle infinito
   useEffect(() => {
     getVeggie();
   }, [])
-    
+  
+  //declaro funcion asincrona ( async ) para permitir que se ejecuten otras tareas
+  //mientras carga la misma.
   const getVeggie = async () => {
     // verifica si se encuentra en el localStorage 
     const check = localStorage.getItem('veggie');
-
     // para evitar hacer el fetch en cada actualizacion de la pagina 
     if (check){
       setVeggie(JSON.parse(check));
     }else{
+      //esperamos la respuesta de una función(solo se puede usar dentro de async)
       const api = await fetch(
         `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tag=vegetarian`
       ); 
+      //el texto plano se pasa a formato json y se almacena en data
       const data = await api.json();
       localStorage.setItem('veggie',JSON.stringify(data.recipes));
       setVeggie(data.recipes)

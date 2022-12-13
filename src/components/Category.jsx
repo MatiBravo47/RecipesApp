@@ -1,5 +1,7 @@
+//Iconos
 import { FaPizzaSlice, FaHamburger } from "react-icons/fa";
 import { GiNoodles, GiChopsticks } from "react-icons/gi";
+
 import styled from "styled-components";
 import {NavLink} from 'react-router-dom';
 
@@ -27,7 +29,7 @@ function Category() {
 }
 
 
-//Style components 
+//Estilo componentes 
 const List = styled.div`
   display: flex;
   justify-content: center;

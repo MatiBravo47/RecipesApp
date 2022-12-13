@@ -6,10 +6,13 @@ import '@splidejs/react-splide/css';
 import {Link} from 'react-router-dom';
 
 function Popular() {
+  
   const [popular, setPopular] = useState([]); 
+  
   useEffect(() => {
     getPopular();
   }, [])    
+  
   const getPopular = async () => {
     // verifica si se encuentra en el localStorage 
     const check = localStorage.getItem('popular');
