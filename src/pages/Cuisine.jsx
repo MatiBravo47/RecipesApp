@@ -31,7 +31,7 @@ console.log(params.type);
                     <h4>{item.title}</h4>
                     </Link>
                 </Card>
-            )
+            );
         })}
     </Grid>
   );
