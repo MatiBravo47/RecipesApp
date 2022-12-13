@@ -1,5 +1,9 @@
 # RecipesApp
 
+## API utilizada:
+- https://spoonacular.com/
+
+
 ## Dependencias
 
 - https://styled-components.com/
