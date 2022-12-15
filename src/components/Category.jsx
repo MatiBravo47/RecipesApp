@@ -1,8 +1,9 @@
 //Iconos
 import { FaPizzaSlice, FaHamburger } from "react-icons/fa";
 import { GiNoodles, GiChopsticks } from "react-icons/gi";
-
+//Estilo componentes 
 import styled from "styled-components";
+//Navegacion
 import {NavLink} from 'react-router-dom';
 
 function Category() {

@@ -1,7 +1,6 @@
-import {useEffect, useState} from "react";
+import React ,{useEffect, useState} from 'react'
 import styled from 'styled-components'
 import {useParams} from 'react-router-dom' 
-import React from 'react'
 
 function Recipe() {
   let params = useParams();
@@ -15,6 +14,7 @@ function Recipe() {
     setDetails(detailData);
     console.log(detailData)
   }
+
   useEffect(() => {
     fetchDetails();
   },[params.name]);
@@ -34,12 +34,14 @@ function Recipe() {
           onClick={() => setActiveTab('ingredients')}>
             Ingredients
         </Button>
+        {/* muestra instruciones  */}
         {activeTab === 'instructions' && (
           <div>
             <h3 dangerouslySetInnerHTML={{__html: details.summary}}></h3>
             <h3 dangerouslySetInnerHTML={{__html: details.instructions}}></h3>
           </div>
         )}
+        {/* Muestra ingredientes  */}
         {activeTab === 'ingredients' && (
           <ul>
             {details.extendedIngredients.map((ingredient) => 
@@ -52,7 +54,7 @@ function Recipe() {
   )
 }
 
-//Styled components 
+//Estilo de componentes 
 const DetailWrapper = styled.div`
   margin-top: 10rem;
   margin-bottom: 5rem;

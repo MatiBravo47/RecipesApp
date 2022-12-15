@@ -6,12 +6,15 @@ import { FaBorderNone } from 'react-icons/fa';
 
 function Cuisine() {
   const [cuisine, setCuisine] = useState([]);
+  
   let params = useParams();
+  
   const getCuisine = async (name) => {
     const data = await fetch (`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`)
     const recipes = await data.json();
     setCuisine(recipes.results); 
   };
+  
   useEffect(()=> {
     getCuisine(params.type);
   },[params.type]);
@@ -37,7 +40,7 @@ function Cuisine() {
   );
 }
 
-//Styled components
+//Estilo de componentes 
 const Grid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeats(auto-fit, minmax(20rem, 1fr));

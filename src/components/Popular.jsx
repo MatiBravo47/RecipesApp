@@ -1,8 +1,12 @@
 //rfce ES7
+//Hooks
 import { useEffect, useState } from "react";
+//Estilo componentes
 import styled from "styled-components";
+//Tarjetas
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
+//Navegacion
 import {Link} from 'react-router-dom';
 
 function Popular() {
