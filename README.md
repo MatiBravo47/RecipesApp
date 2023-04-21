@@ -1,6 +1,7 @@
 # RecipesApp
 
-git clone 
+git clone https://github.com/MatiBravo47/RecipesApp.git
+
 
 ## API utilizada:
 - https://spoonacular.com/
