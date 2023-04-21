@@ -1,9 +1,11 @@
 # RecipesApp
 
+```bash
 git clone https://github.com/MatiBravo47/RecipesApp.git
 CD 22803-grupo9-comidApp`
 npm i
 npm start
+```
 
 
 ## API utilizada:
