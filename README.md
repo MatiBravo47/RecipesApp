@@ -1,5 +1,7 @@
 # RecipesApp
 
+git clone 
+
 ## API utilizada:
 - https://spoonacular.com/
 
