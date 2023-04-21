@@ -2,7 +2,7 @@
 
 ```bash
 git clone https://github.com/MatiBravo47/RecipesApp.git
-CD RecipesApp`
+CD RecipesApp
 npm i
 npm start
 ```
