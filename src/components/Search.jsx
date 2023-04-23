@@ -48,14 +48,15 @@ const FormStyle = styled.form`
     border: none;
     border-radius: 1rem;
     outline:none;
-    width: 100%;
+    width: 200%;
   }
-  svg{
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translate(100%, 50%);
-    color: white
+  svg {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
   }
+
 `
 export default Search
