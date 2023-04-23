@@ -1,5 +1,13 @@
 # RecipesApp
 
+```bash
+git clone https://github.com/MatiBravo47/RecipesApp.git
+CD RecipesApp
+npm i
+npm start
+```
+
+
 ## API utilizada:
 - https://spoonacular.com/
 
