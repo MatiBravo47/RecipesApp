@@ -21,7 +21,7 @@ function Search() {
   return (
     <FormStyle onSubmit={submitHandler}>
       <div>
-        <FaSearch></FaSearch>
+        <FaSearch/>
         <input 
           onChange={(e) => setInput(e.target.value)} 
           type="text"
@@ -34,9 +34,10 @@ function Search() {
 
 //Style components 
 const FormStyle = styled.form`
-  margin: 0rem 20rem;
+  margin: 0 auto;
+  max-width: 800px;
+
   div{
-    width: 100% ;
     position: relative;
   }
   input{
@@ -48,12 +49,12 @@ const FormStyle = styled.form`
     border: none;
     border-radius: 1rem;
     outline:none;
-    width: 200%;
+    width: 100%;
   }
   svg {
   position: absolute;
   top: 50%;
-  left: 10%;
+  left: 2%;
   transform: translateY(-50%);
   color: white;
   }
